@@ -19,12 +19,12 @@
     Usage:
     - Select one or more tracks in REAPER.
     - Run the script.
-    - MIDI items containing CC data mapped from automation envelopes will be created in the "Target" track.
+    - The script creates MIDI items in a track named "Target", containing CC data derived from each selected track's automation envelopes.
 
     Notes:
-    - Each envelope is mapped to a unique CC number based on its index.
-    - The script handles tracks with no envelopes gracefully.
-    - The script uses REAPER's Undo system for safe operation.
+    - Each envelope is assigned a unique MIDI CC number, starting from the user-specified base.
+    - Tracks without envelopes are skipped automatically.
+    - All operations are wrapped in REAPER's Undo system for easy reversal.
 
     @author Your Name
     @version 1.3
